@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class MyGreetingApplication {
 
     public static void main(String[] args) {
+        System.out.println("Hello from Murali!!!");
         SpringApplication.run(MyGreetingApplication.class, args);
     }
 
