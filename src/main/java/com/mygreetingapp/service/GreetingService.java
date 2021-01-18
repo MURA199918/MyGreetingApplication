@@ -3,6 +3,7 @@ package com.mygreetingapp.service;
 import com.mygreetingapp.model.Greeting;
 import com.mygreetingapp.model.User;
 import com.mygreetingapp.repository.GreetingRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.atomic.AtomicLong;
@@ -12,6 +13,7 @@ public class GreetingService implements IGreetingService{
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
 
+    @Autowired
     private GreetingRepository greetingRepository;
 
     @Override
