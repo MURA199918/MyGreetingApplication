@@ -26,4 +26,9 @@ public class GreetingService implements IGreetingService{
     public Greeting getGreetingById(long id) {
         return greetingRepository.findById(id).get();
     }
+
+    @Override
+    public Greeting getGreetingByList(User user) {
+        return null;
+    }
 }

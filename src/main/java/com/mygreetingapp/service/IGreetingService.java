@@ -6,5 +6,5 @@ import com.mygreetingapp.model.User;
 public interface IGreetingService {
     Greeting addGreeting(User user);
     Greeting getGreetingById(long id);
-
+    Greeting getGreetingByList(User user);
 }
