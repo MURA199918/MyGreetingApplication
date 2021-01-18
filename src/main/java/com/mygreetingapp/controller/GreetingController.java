@@ -6,6 +6,7 @@ import com.mygreetingapp.service.IGreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
@@ -34,8 +35,8 @@ public class GreetingController {
         return greetingService.getGreetingById(id);
     }
 
-    @RequestMapping(value = {"/query"}, method = RequestMethod.GET)
-    public Greeting getList(@RequestBody User user) {
-        return greetingService.getGreetingByList(user);
+    @GetMapping("/list")
+    public List<Greeting> getListData() {
+        return greetingService.getGreetingByList();
     }
 }
