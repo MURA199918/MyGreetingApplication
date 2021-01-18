@@ -32,4 +32,11 @@ public class GreetingService implements IGreetingService{
     public List<Greeting> getGreetingByList() {
         return greetingRepository.findAll();
     }
+
+    @Override
+    public Greeting deleteGreetingById(long id) {
+        Greeting messageId = getGreetingById(id);
+        greetingRepository.deleteById(id);
+        return messageId;
+    }
 }
